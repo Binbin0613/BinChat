@@ -56,7 +56,9 @@ public:
     {
         if (LoginDialog->objectName().isEmpty())
             LoginDialog->setObjectName("LoginDialog");
-        LoginDialog->resize(386, 673);
+        LoginDialog->resize(300, 500);
+        LoginDialog->setMinimumSize(QSize(300, 500));
+        LoginDialog->setMaximumSize(QSize(300, 500));
         verticalLayout_2 = new QVBoxLayout(LoginDialog);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout = new QVBoxLayout();

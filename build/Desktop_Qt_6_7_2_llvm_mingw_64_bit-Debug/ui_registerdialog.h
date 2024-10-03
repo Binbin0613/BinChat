@@ -32,6 +32,9 @@ public:
     QWidget *page;
     QVBoxLayout *verticalLayout_3;
     QSpacerItem *verticalSpacer;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout_4;
+    QLabel *err_tip;
     QHBoxLayout *horizontalLayout;
     QLabel *user_label;
     QLineEdit *user_edit;
@@ -42,8 +45,8 @@ public:
     QLabel *pass_label;
     QLineEdit *pass_edit;
     QHBoxLayout *horizontalLayout_4;
-    QLabel *label_2;
-    QLineEdit *lineEdit_2;
+    QLabel *confirm_label;
+    QLineEdit *confirm_edit;
     QHBoxLayout *horizontalLayout_5;
     QLabel *varify_label;
     QLineEdit *varify_edit;
@@ -59,7 +62,9 @@ public:
     {
         if (RegisterDialog->objectName().isEmpty())
             RegisterDialog->setObjectName("RegisterDialog");
-        RegisterDialog->resize(400, 300);
+        RegisterDialog->resize(300, 500);
+        RegisterDialog->setMinimumSize(QSize(300, 500));
+        RegisterDialog->setMaximumSize(QSize(300, 500));
         verticalLayout_2 = new QVBoxLayout(RegisterDialog);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout = new QVBoxLayout();
@@ -73,6 +78,19 @@ public:
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
         verticalLayout_3->addItem(verticalSpacer);
+
+        widget = new QWidget(page);
+        widget->setObjectName("widget");
+        verticalLayout_4 = new QVBoxLayout(widget);
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        err_tip = new QLabel(widget);
+        err_tip->setObjectName("err_tip");
+        err_tip->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        verticalLayout_4->addWidget(err_tip);
+
+
+        verticalLayout_3->addWidget(widget);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
@@ -127,15 +145,15 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName("horizontalLayout_4");
-        label_2 = new QLabel(page);
-        label_2->setObjectName("label_2");
+        confirm_label = new QLabel(page);
+        confirm_label->setObjectName("confirm_label");
 
-        horizontalLayout_4->addWidget(label_2);
+        horizontalLayout_4->addWidget(confirm_label);
 
-        lineEdit_2 = new QLineEdit(page);
-        lineEdit_2->setObjectName("lineEdit_2");
+        confirm_edit = new QLineEdit(page);
+        confirm_edit->setObjectName("confirm_edit");
 
-        horizontalLayout_4->addWidget(lineEdit_2);
+        horizontalLayout_4->addWidget(confirm_edit);
 
 
         verticalLayout_3->addLayout(horizontalLayout_4);
@@ -206,10 +224,11 @@ public:
     void retranslateUi(QDialog *RegisterDialog)
     {
         RegisterDialog->setWindowTitle(QCoreApplication::translate("RegisterDialog", "Dialog", nullptr));
+        err_tip->setText(QCoreApplication::translate("RegisterDialog", "\351\224\231\350\257\257\346\217\220\347\244\272\357\274\201\357\274\201\357\274\201", nullptr));
         user_label->setText(QCoreApplication::translate("RegisterDialog", "\347\224\250\346\210\267\357\274\232", nullptr));
         email_label->setText(QCoreApplication::translate("RegisterDialog", "\351\202\256\347\256\261\357\274\232", nullptr));
         pass_label->setText(QCoreApplication::translate("RegisterDialog", "\345\257\206\347\240\201\357\274\232", nullptr));
-        label_2->setText(QCoreApplication::translate("RegisterDialog", "\347\241\256\350\256\244\345\257\206\347\240\201\357\274\232", nullptr));
+        confirm_label->setText(QCoreApplication::translate("RegisterDialog", "\347\241\256\350\256\244\345\257\206\347\240\201\357\274\232", nullptr));
         varify_label->setText(QCoreApplication::translate("RegisterDialog", "\351\252\214\350\257\201\347\240\201\357\274\232", nullptr));
         get_code->setText(QCoreApplication::translate("RegisterDialog", "\347\202\271\345\207\273\350\216\267\345\217\226", nullptr));
         confirm_btn->setText(QCoreApplication::translate("RegisterDialog", "\347\241\256\350\256\244", nullptr));
