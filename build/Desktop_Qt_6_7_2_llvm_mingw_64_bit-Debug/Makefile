@@ -410,6 +410,7 @@ Makefile: ../../BinChat.pro H:/soft/Qt/setup/6.7.2/llvm-mingw_64/mkspecs/win32-c
 		../../BinChat.pro \
 		H:/soft/Qt/setup/6.7.2/llvm-mingw_64/lib/Qt6Widgets.prl \
 		H:/soft/Qt/setup/6.7.2/llvm-mingw_64/lib/Qt6Gui.prl \
+		H:/soft/Qt/setup/6.7.2/llvm-mingw_64/lib/Qt6Network.prl \
 		H:/soft/Qt/setup/6.7.2/llvm-mingw_64/lib/Qt6Core.prl \
 		H:/soft/Qt/setup/6.7.2/llvm-mingw_64/lib/Qt6EntryPoint.prl \
 		H:/soft/Qt/setup/6.7.2/llvm-mingw_64/mkspecs/features/build_pass.prf \
@@ -755,6 +756,7 @@ H:/soft/Qt/setup/6.7.2/llvm-mingw_64/mkspecs/features/lex.prf:
 ../../BinChat.pro:
 H:/soft/Qt/setup/6.7.2/llvm-mingw_64/lib/Qt6Widgets.prl:
 H:/soft/Qt/setup/6.7.2/llvm-mingw_64/lib/Qt6Gui.prl:
+H:/soft/Qt/setup/6.7.2/llvm-mingw_64/lib/Qt6Network.prl:
 H:/soft/Qt/setup/6.7.2/llvm-mingw_64/lib/Qt6Core.prl:
 H:/soft/Qt/setup/6.7.2/llvm-mingw_64/lib/Qt6EntryPoint.prl:
 H:/soft/Qt/setup/6.7.2/llvm-mingw_64/mkspecs/features/build_pass.prf:
